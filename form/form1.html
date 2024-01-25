@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        body{
+            background-image: linear-gradient(to right, rgb(0, 183, 255), rgb(250, 180, 244));
+        }
+        .container{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .login{
+            background-color: rgb(255, 255, 255);
+            border-radius: 5px;
+            box-shadow: 10px 10px 10px;
+            height: 90vh;
+            width: 25vw;
+        }
+
+        .login h2{
+            text-align: center;
+            font-family: 'Lucida Sans';
+            font-weight: bolder;
+        }
+        
+        input{
+            width: 90%;
+            text-transform: uppercase;
+        }
+
+        .log-1{
+            padding: 30px;
+        }
+
+        label{
+            font-family:'Trebuchet MS';
+        }
+        input{
+            padding: 8px;
+            margin: 10px 0px;
+            border: none;
+            background-color: white;
+            border-bottom: 2px solid gray;
+            outline: none;
+            text-transform: uppercase;
+        }
+
+        .forgot{
+            text-align: end;
+            margin: 0px 0px;
+            color: gray;
+            cursor: pointer;
+        }
+
+        button{
+            border: none;
+            width: 100%;
+            margin-top: 30px;
+            padding: 10px;
+            background-image: linear-gradient(to right, rgb(0, 183, 255), rgb(250, 180, 244));
+            border-radius: 20px;
+            font-family:'Trebuchet MS';
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 15px;
+            color: white;
+        }
+
+        .icon{
+            text-align: center;
+            color: gray;
+            margin-top: 30px;
+        }
+        
+        .signup{
+            margin-top: 70px;
+            text-align: center;
+            color: gray;
+            line-height: 5px;
+        }
+
+        i{
+            padding: 0px 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login">
+            <h2>Log in</h2>
+             <form class="form" name="frmLogin" id="1">
+              <div class="log-1">
+                <div class="firstName">
+                  <i class="fa-solid fa-user"></i>
+                  <label for="fname">Username</label>
+                  <input type="text" name="firstname" id="fname" tabindex="1" placeholder="Type your username" autocomplete="off" required>
+                </div>
+           
+                <div class="lastName">
+                    <i class="fa-solid fa-lock"></i>
+                    <label>Password</label>
+                    <input type="password" name="lname" tabindex="2" placeholder="Type your Password" autocomplete="off" required>
+                    <p class="forgot">Forgot password?</p>
+                </div>
+
+                <div class="button">
+                    <button>Submit</button>
+                </div>
+
+                <div class="icon">  
+                    <p>Or Sign up Using</p>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-google"></i>
+                </div>
+
+                <div class="signup">
+                    <p>Or Sign up Using</p>
+                    <p>SIGN UP</p>
+                </div>
+              </div>
+             </form>
+        </div>
+    </div>
+</body>
+</html>

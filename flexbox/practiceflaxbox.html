@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* flex */
+        .container{
+            background-color: rgb(28, 50, 255);
+            border: 2px solid black;
+            display: flex;
+        }
+        /* inline-flex */
+        .container1{
+            background-color: blue;
+            border: 2px solid black;
+            display: inline-flex;
+        }
+        /* row */
+        .container3{
+            background-color: blue;
+            border: 2px solid black;
+            display: flex;
+            flex-direction: row;
+        }
+        /* row-revese */
+        .container4{
+            background-color: blue;
+            border: 2px solid black;
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        /* column */
+        .container5{
+            background-color: blue;
+            border: 2px solid black;
+            display: flex;
+            flex-direction: column;
+        }
+        /* column-reverse */
+        .container6{
+            background-color: blue;
+            border: 2px solid black;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        /* nowrap */
+        .container7{
+            background-color: blue;
+            border: 2px solid black;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        /* wrap */
+        .container8{
+            background-color: blue;
+            border: 2px solid black;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        /* wrap-reverse */
+        .container9{
+            background-color: blue;
+            border: 2px solid black;
+            display: flex;
+            flex-wrap: wrap-reverse;
+        }
+        /* wrap use in column */
+        .container10{
+            background-color: blue;
+            border: 2px solid black;
+            display: flex;
+            height: 300px;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+        /* wrap-revese use in column */
+        .container11{
+            background-color: blue;
+            border: 2px solid black;
+            display: flex;
+            height: 300px;
+            flex-direction: column;
+            flex-wrap: wrap-reverse;
+        }
+        /* row-revere wrap */
+        .container12{
+            background-color: blue;
+            border: 2px solid black;
+            display: flex;
+            flex-flow: row-reverse wrap;
+        }
+        /* column-reverse wrap */
+        .container13{
+            background-color: blue;
+            border: 2px solid black;
+            display: flex;
+            height: 400px;
+            flex-flow: column-reverse wrap;
+        }
+        /* flex start */
+        .container14{
+            background-color: blue;
+            border: 2px solid black;
+            display: flex;
+            justify-content: flex-start;
+        }
+        /* start end */
+        .container15{
+            background-color: blue;
+            border: 2px solid black;
+            display: flex;
+            justify-content: flex-end;
+        }
+        /* center */
+        .container16{
+            background-color: blue;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+        }
+        /* Space-between */
+        .container17{
+            background-color: blue;
+            border: 2px solid black;
+            display: flex;
+            justify-content: space-between;
+        }
+        /* space-around */
+        .container18{
+            background-color: blue;
+            border: 2px solid black;
+            display: flex;
+            justify-content: space-around;
+        }
+        /* space-evenly */
+        .container19{
+            background-color: blue;
+            border: 2px solid black;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        /* flex-start */
+        .container20{
+            background-color: blue;
+            border: 2px solid black;
+            display: flex;
+            height: 200px;
+            align-items: flex-start;
+        }
+        /* center */
+        .container21{
+            background-color: blue;
+            border: 2px solid black;
+            display: flex;
+            height: 200px;
+            align-items: center;
+        }
+        /* flex-end */
+        .container22{
+            background-color: blue;
+            border: 2px solid black;
+            display: flex;
+            height: 200px;
+            align-items:flex-end;
+        }
+        /* stretch */
+        .container23{
+            background-color: blue;
+            border: 2px solid black;
+            display: flex;
+            height: 200px;
+            align-items: stretch;
+        }
+        /* baseline */
+        .container24{
+            background-color: blue;
+            border: 2px solid black;
+            display: flex;
+            height: 200px;
+            align-items: baseline;
+        }
+        .base1{
+            background-color: rgb(172, 109, 231);
+            padding-bottom:4rem;
+        }
+        .base2{
+            background-color:lightcoral;
+            padding-top: 2rem;
+        }
+        .base3{
+            background-color:lightslategrey;
+            font-size: 2rem;
+        }
+        /* flex-start */
+        .container25{
+            background-color: blue;
+            border: 2px solid black;
+            display: flex;
+            height: 200px;
+            flex-wrap: wrap;
+            align-content: flex-start;
+        }
+        /* center */
+        .container26{
+            background-color: blue;
+            border: 2px solid black;
+            display: flex;
+            height: 200px;
+            flex-wrap: wrap;
+            align-content: center;
+        }
+        /* flex-end */
+        .container27{
+            background-color: blue;
+            border: 2px solid black;
+            display: flex;
+            height: 200px;
+            flex-wrap: wrap;
+            align-content: flex-end;
+        }
+        .container32{
+            background-color: blue;
+            border: 2px solid black;
+            display: flex;
+            height: 200px;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+        }
+        /* stretch */
+        .container28{
+            background-color: blue;
+            border: 2px solid black;
+            display: flex;
+            height: 200px;
+            flex-wrap: wrap;
+            align-content: stretch;
+        }
+        /* space-between */
+        .container29{
+            background-color: blue;
+            border: 2px solid black;
+            display: flex;
+            height: 200px;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-content: space-between;
+        }
+        /* space-around */
+        .container30{
+            background-color: blue;
+            border: 2px solid black;
+            display: flex;
+            height: 200px;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-content: space-around;
+        }
+        /* gap */
+        .container31{
+            background-color: blue;
+            border: 2px solid black;
+            display: flex;
+            gap: 20px;
+        }
+        .flex-item{
+            font-size: 1.5rem;
+            padding: 1rem;
+            text-align: center;
+            color: white;
+        }
+        
+        .one{
+            background-color: rgb(172, 109, 231);
+        }
+        .two{
+            background-color:lightcoral;
+        }
+        .Three{
+            background-color:lightslategrey;
+        }
+        .four{
+
+            background-color: coral;
+        }
+        .five{
+            background-color:lightblue
+        }
+        .six{
+            background-color: lightgreen;
+        }
+        .seven{
+            background-color: lightseagreen;
+        }
+        .eight{
+            background-color: lightpink;
+        }
+        .nine{
+            background-color: rgb(230, 126, 126);
+        }
+    </style>
+</head>
+<body>
+    <h1>Display Properties</h1>
+    <h3>1.Display : Flex</h3>
+    <div class="container">
+        <div class="flex-item one">One</div>
+        <div class="flex-item two">Two</div>
+        <div class="flex-item Three">Three</div>
+        <div class="flex-item four">four</div>
+        <div class="flex-item five">five</div>
+        <div class="flex-item six">Six</div>
+        <div class="flex-item seven">Seven</div>
+        <div class="flex-item eight">Eight</div>
+        <div class="flex-item nine">Nine</div>
+    </div>
+    <hr>
+    <h3>2.Display : inline-flex</h3>
+    <div class="container1">
+        <div class="flex-item one">One</div>
+        <div class="flex-item two">Two</div>
+        <div class="flex-item Three">Three</div>
+        <div class="flex-item four">four</div>
+        <div class="flex-item five">five</div>
+        <div class="flex-item six">Six</div>
+        <div class="flex-item seven">Seven</div>
+        <div class="flex-item eight">Eight</div>
+        <div class="flex-item nine">Nine</div>
+    </div>
+    <hr>
+    <h1>Flex Direction</h1>
+    <h3>1.Flex-direction: row</h3>
+    <div class="container3">
+        <div class="flex-item one">One</div>
+        <div class="flex-item two">Two</div>
+        <div class="flex-item Three">Three</div>
+        <div class="flex-item four">four</div>
+        <div class="flex-item five">five</div>
+        <div class="flex-item six">Six</div>
+        <div class="flex-item seven">Seven</div>
+        <div class="flex-item eight">Eight</div>
+        <div class="flex-item nine">Nine</div>
+    </div>
+    <hr>
+    <h3>2.Flex-direction: row-reverse</h3>
+    <div class="container4">
+        <div class="flex-item one">One</div>
+        <div class="flex-item two">Two</div>
+        <div class="flex-item Three">Three</div>
+        <div class="flex-item four">four</div>
+        <div class="flex-item five">five</div>
+        <div class="flex-item six">Six</div>
+        <div class="flex-item seven">Seven</div>
+        <div class="flex-item eight">Eight</div>
+        <div class="flex-item nine">Nine</div>
+    </div>
+    <hr>
+    <h3>3.Flex-direction: Column</h3>
+    <div class="container5">
+        <div class="flex-item one">One</div>
+        <div class="flex-item two">Two</div>
+        <div class="flex-item Three">Three</div>
+        <div class="flex-item four">four</div>
+        <div class="flex-item five">five</div>
+        <div class="flex-item six">Six</div>
+        <div class="flex-item seven">Seven</div>
+        <div class="flex-item eight">Eight</div>
+        <div class="flex-item nine">Nine</div>
+    </div>
+    <hr>
+    <h3>4.Flex-direction: Column-reverse</h3>
+    <div class="container6">
+        <div class="flex-item one">One</div>
+        <div class="flex-item two">Two</div>
+        <div class="flex-item Three">Three</div>
+        <div class="flex-item four">four</div>
+        <div class="flex-item five">five</div>
+        <div class="flex-item six">Six</div>
+        <div class="flex-item seven">Seven</div>
+        <div class="flex-item eight">Eight</div>
+        <div class="flex-item nine">Nine</div>
+    </div>
+    <hr>
+    <h1>Flex wrap</h1>
+    <h3>1.Flex-wrap : nowrap</h3>
+    <div class="container7">
+        <div class="flex-item one">One</div>
+        <div class="flex-item two">Two</div>
+        <div class="flex-item Three">Three</div>
+        <div class="flex-item four">four</div>
+        <div class="flex-item five">five</div>
+        <div class="flex-item six">Six</div>
+        <div class="flex-item seven">Seven</div>
+        <div class="flex-item eight">Eight</div>
+        <div class="flex-item nine">Nine</div>
+    </div>
+    <hr>
+    <h3>2.Flex-wrap : wrap</h3>
+    <div class="container8">
+        <div class="flex-item one">One</div>
+        <div class="flex-item two">Two</div>
+        <div class="flex-item Three">Three</div>
+        <div class="flex-item four">four</div>
+        <div class="flex-item five">five</div>
+        <div class="flex-item six">Six</div>
+        <div class="flex-item seven">Seven</div>
+        <div class="flex-item eight">Eight</div>
+        <div class="flex-item nine">Nine</div>
+    </div>
+    <hr>
+    <h3>3.Flex-wrap : wrap-revese</h3>
+    <div class="container9">
+        <div class="flex-item one">One</div>
+        <div class="flex-item two">Two</div>
+        <div class="flex-item Three">Three</div>
+        <div class="flex-item four">four</div>
+        <div class="flex-item five">five</div>
+        <div class="flex-item six">Six</div>
+        <div class="flex-item seven">Seven</div>
+        <div class="flex-item eight">Eight</div>
+        <div class="flex-item nine">Nine</div>
+    </div>
+    <hr>
+    <h3>4.Flex-wrap : wrap(Use in column)</h3>
+    <div class="container10">
+        <div class="flex-item one">One</div>
+        <div class="flex-item two">Two</div>
+        <div class="flex-item Three">Three</div>
+        <div class="flex-item four">four</div>
+        <div class="flex-item five">five</div>
+        <div class="flex-item six">Six</div>
+        <div class="flex-item seven">Seven</div>
+        <div class="flex-item eight">Eight</div>
+        <div class="flex-item nine">Nine</div>
+    </div>
+    <hr>
+    <h3>5.Flex-wrap : wrap-reverse(Use in column)</h3>
+    <div class="container11">
+        <div class="flex-item one">One</div>
+        <div class="flex-item two">Two</div>
+        <div class="flex-item Three">Three</div>
+        <div class="flex-item four">four</div>
+        <div class="flex-item five">five</div>
+        <div class="flex-item six">Six</div>
+        <div class="flex-item seven">Seven</div>
+        <div class="flex-item eight">Eight</div>
+        <div class="flex-item nine">Nine</div>
+    </div>
+    <hr>
+    <h1>Flex flow</h1>
+    <h3>1.Flex-flow: row-reverse wrap</h3>
+    <div class="container12">
+        <div class="flex-item one">One</div>
+        <div class="flex-item two">Two</div>
+        <div class="flex-item Three">Three</div>
+        <div class="flex-item four">four</div>
+        <div class="flex-item five">five</div>
+        <div class="flex-item six">Six</div>
+        <div class="flex-item seven">Seven</div>
+        <div class="flex-item eight">Eight</div>
+        <div class="flex-item nine">Nine</div>
+    </div>
+    <hr>
+    <h3>2.Flex-flow: column-reverse wrap</h3>
+    <div class="container13">
+        <div class="flex-item one">One</div>
+        <div class="flex-item two">Two</div>
+        <div class="flex-item Three">Three</div>
+        <div class="flex-item four">four</div>
+        <div class="flex-item five">five</div>
+        <div class="flex-item six">Six</div>
+        <div class="flex-item seven">Seven</div>
+        <div class="flex-item eight">Eight</div>
+        <div class="flex-item nine">Nine</div>
+    </div>
+    <hr>
+    <h1>Justify Content</h1>
+    <h3>1.justify-content: Flex-start</h3>
+    <div class="container14">
+        <div class="flex-item one">One</div>
+        <div class="flex-item two">Two</div>
+        <div class="flex-item Three">Three</div>
+        <div class="flex-item four">four</div>
+        <div class="flex-item five">five</div>
+        <div class="flex-item six">Six</div>
+        <div class="flex-item seven">Seven</div>
+        <div class="flex-item eight">Eight</div>
+        <div class="flex-item nine">Nine</div>
+    </div>
+    <hr>
+    <h3>2.justify-content: Flex-end</h3>
+    <div class="container15">
+        <div class="flex-item one">One</div>
+        <div class="flex-item two">Two</div>
+        <div class="flex-item Three">Three</div>
+        <div class="flex-item four">four</div>
+        <div class="flex-item five">five</div>
+        <div class="flex-item six">Six</div>
+        <div class="flex-item seven">Seven</div>
+        <div class="flex-item eight">Eight</div>
+        <div class="flex-item nine">Nine</div>
+    </div>
+    <hr>
+    <h3>3.justify-content: Center</h3>
+    <div class="container16">
+        <div class="flex-item one">One</div>
+        <div class="flex-item two">Two</div>
+        <div class="flex-item Three">Three</div>
+        <div class="flex-item four">four</div>
+        <div class="flex-item five">five</div>
+        <div class="flex-item six">Six</div>
+        <div class="flex-item seven">Seven</div>
+        <div class="flex-item eight">Eight</div>
+        <div class="flex-item nine">Nine</div>
+    </div>
+    <hr>
+    <h3>4.justify-content: Space-between</h3>
+    <div class="container17">
+        <div class="flex-item one">One</div>
+        <div class="flex-item two">Two</div>
+        <div class="flex-item Three">Three</div>
+        <div class="flex-item four">four</div>
+        <div class="flex-item five">five</div>
+        <div class="flex-item six">Six</div>
+        <div class="flex-item seven">Seven</div>
+        <div class="flex-item eight">Eight</div>
+        <div class="flex-item nine">Nine</div>
+    </div>
+    <hr>
+    <h3>5.justify-content: Space-around</h3>
+    <div class="container18">
+        <div class="flex-item one">One</div>
+        <div class="flex-item two">Two</div>
+        <div class="flex-item Three">Three</div>
+        <div class="flex-item four">four</div>
+        <div class="flex-item five">five</div>
+        <div class="flex-item six">Six</div>
+        <div class="flex-item seven">Seven</div>
+        <div class="flex-item eight">Eight</div>
+        <div class="flex-item nine">Nine</div>
+    </div>
+    <hr>
+    <h3>6.justify-content: Space-evenly</h3>
+    <div class="container19">
+        <div class="flex-item one">One</div>
+        <div class="flex-item two">Two</div>
+        <div class="flex-item Three">Three</div>
+        <div class="flex-item four">four</div>
+        <div class="flex-item five">five</div>
+        <div class="flex-item six">Six</div>
+        <div class="flex-item seven">Seven</div>
+        <div class="flex-item eight">Eight</div>
+        <div class="flex-item nine">Nine</div>
+    </div>
+    <hr>
+    <h1>Align-items</h1>
+    <h3>1.align-items: Flex-start</h3>
+    <div class="container20">
+        <div class="flex-item one">One</div>
+        <div class="flex-item two">Two</div>
+        <div class="flex-item Three">Three</div>
+        <div class="flex-item four">four</div>
+        <div class="flex-item five">five</div>
+        <div class="flex-item six">Six</div>
+        <div class="flex-item seven">Seven</div>
+        <div class="flex-item eight">Eight</div>
+        <div class="flex-item nine">Nine</div>
+    </div>
+    <hr>
+    <h3>2.align-items: center</h3>
+    <div class="container21">
+        <div class="flex-item one">One</div>
+        <div class="flex-item two">Two</div>
+        <div class="flex-item Three">Three</div>
+        <div class="flex-item four">four</div>
+        <div class="flex-item five">five</div>
+        <div class="flex-item six">Six</div>
+        <div class="flex-item seven">Seven</div>
+        <div class="flex-item eight">Eight</div>
+        <div class="flex-item nine">Nine</div>
+    </div>
+    <hr>
+    <h3>3.align-items: flex-end</h3>
+    <div class="container22">
+        <div class="flex-item one">One</div>
+        <div class="flex-item two">Two</div>
+        <div class="flex-item Three">Three</div>
+        <div class="flex-item four">four</div>
+        <div class="flex-item five">five</div>
+        <div class="flex-item six">Six</div>
+        <div class="flex-item seven">Seven</div>
+        <div class="flex-item eight">Eight</div>
+        <div class="flex-item nine">Nine</div>
+    </div>
+    <hr>
+    <h3>4.align-items: stretch</h3>
+    <div class="container23">
+        <div class="flex-item one">One</div>
+        <div class="flex-item two">Two</div>
+        <div class="flex-item Three">Three</div>
+        <div class="flex-item four">four</div>
+        <div class="flex-item five">five</div>
+        <div class="flex-item six">Six</div>
+        <div class="flex-item seven">Seven</div>
+        <div class="flex-item eight">Eight</div>
+        <div class="flex-item nine">Nine</div>
+    </div>
+    <hr>
+    <h3>5.align-items: baseline</h3>
+    <div class="container24">
+        <div class="flex-item base1">One</div>
+        <div class="flex-item base2">Two</div>
+        <div class="flex-item base3">Three</div>
+        <div class="flex-item four">four</div>
+        <div class="flex-item five">five</div>
+        <div class="flex-item six">Six</div>
+        <div class="flex-item seven">Seven</div>
+        <div class="flex-item eight">Eight</div>
+        <div class="flex-item nine">Nine</div>
+    </div>
+    <hr>
+    <h1>Align-content</h1>
+    <h3>1.align-content: flex-start</h3>
+    <div class="container25">
+        <div class="flex-item one">One</div>
+        <div class="flex-item two">Two</div>
+        <div class="flex-item Three">Three</div>
+        <div class="flex-item four">four</div>
+        <div class="flex-item five">five</div>
+        <div class="flex-item six">Six</div>
+        <div class="flex-item seven">Seven</div>
+        <div class="flex-item eight">Eight</div>
+        <div class="flex-item nine">Nine</div>
+    </div>
+    <hr>
+    <h3>2.align-content: center</h3>
+    <div class="container26">
+        <div class="flex-item one">One</div>
+        <div class="flex-item two">Two</div>
+        <div class="flex-item Three">Three</div>
+        <div class="flex-item four">four</div>
+        <div class="flex-item five">five</div>
+        <div class="flex-item six">Six</div>
+        <div class="flex-item seven">Seven</div>
+        <div class="flex-item eight">Eight</div>
+        <div class="flex-item nine">Nine</div>
+    </div>
+    <hr>
+    <h3>3.align-content: flex-end</h3>
+    <div class="container27">
+        <div class="flex-item one">One</div>
+        <div class="flex-item two">Two</div>
+        <div class="flex-item Three">Three</div>
+        <div class="flex-item four">four</div>
+        <div class="flex-item five">five</div>
+        <div class="flex-item six">Six</div>
+        <div class="flex-item seven">Seven</div>
+        <div class="flex-item eight">Eight</div>
+        <div class="flex-item nine">Nine</div>
+    </div>
+    <hr>
+    <h3>4.align-content: center</h3>
+    <h3> justify-content: center</h3>
+    <div class="container32">
+        <div class="flex-item one">One</div>
+        <div class="flex-item two">Two</div>
+        <div class="flex-item Three">Three</div>
+        <div class="flex-item four">four</div>
+        <div class="flex-item five">five</div>
+        <div class="flex-item six">Six</div>
+        <div class="flex-item seven">Seven</div>
+        <div class="flex-item eight">Eight</div>
+        <div class="flex-item nine">Nine</div>
+    </div>
+    <hr>
+    <h3>5.align-content: stretch</h3>
+    <div class="container28">
+        <div class="flex-item one">One</div>
+        <div class="flex-item two">Two</div>
+        <div class="flex-item Three">Three</div>
+        <div class="flex-item four">four</div>
+        <div class="flex-item five">five</div>
+        <div class="flex-item six">Six</div>
+        <div class="flex-item seven">Seven</div>
+        <div class="flex-item eight">Eight</div>
+        <div class="flex-item nine">Nine</div>
+    </div>
+    <hr>
+    <h3>6.align-content: space-between</h3>
+    <div class="container29">
+        <div class="flex-item one">One</div>
+        <div class="flex-item two">Two</div>
+        <div class="flex-item Three">Three</div>
+        <div class="flex-item four">four</div>
+        <div class="flex-item five">five</div>
+        <div class="flex-item six">Six</div>
+        <div class="flex-item seven">Seven</div>
+        <div class="flex-item eight">Eight</div>
+        <div class="flex-item nine">Nine</div>
+    </div>
+    <hr>
+    <h3>7.align-content: space-around</h3>
+    <div class="container30">
+        <div class="flex-item one">One</div>
+        <div class="flex-item two">Two</div>
+        <div class="flex-item Three">Three</div>
+        <div class="flex-item four">four</div>
+        <div class="flex-item five">five</div>
+        <div class="flex-item six">Six</div>
+        <div class="flex-item seven">Seven</div>
+        <div class="flex-item eight">Eight</div>
+        <div class="flex-item nine">Nine</div>
+    </div>
+    <hr>
+    <h1>Gap</h1>
+    <h3>1.gap: 10px </h3>
+    <div class="container31">
+        <div class="flex-item one">One</div>
+        <div class="flex-item two">Two</div>
+        <div class="flex-item Three">Three</div>
+        <div class="flex-item four">four</div>
+        <div class="flex-item five">five</div>
+        <div class="flex-item six">Six</div>
+        <div class="flex-item seven">Seven</div>
+        <div class="flex-item eight">Eight</div>
+        <div class="flex-item nine">Nine</div>
+    </div>
+</body>
+</html>

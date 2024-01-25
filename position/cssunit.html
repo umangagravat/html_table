@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            /* html {
+                font-size: 20px;
+                margin: 10px;
+            } */
+            .root{
+                width: 100vw;
+                height: 100vh;
+                font-size: 1rem;
+                border: 1px solid black;
+            }
+            .head{
+                border: 1px solid greenyellow;
+                background-color: gray;
+                height: 10vh;
+                font-size: 2em;
+                padding: 1rem;
+                color: white;
+                font-family: Arial, Helvetica, sans-serif;
+                justify-content: center;
+                display: flex;
+                align-items: center;
+                display: flex;
+            }
+            .content{
+                display: flex;
+            }
+            .one{
+                border: 1px solid rgb(89, 25, 207);
+                background-color: blanchedalmond;
+                font-size: 1rem;
+                width: 30vw;
+                height: 100vh;
+            }
+            .two{
+                border: 1px solid red;
+                background-color: darkcyan;
+                justify-content: center;
+                display: flex;
+                align-items: center;
+                font-size: 1rem;
+                width: 70vw;
+                height: 100vh;
+            }
+            .footer{
+                border: 1px solid black;
+                background-color: cornflowerblue;
+                justify-content: center;
+                display: flex;
+                align-items: center;
+                font-size: 2em;
+                color: white;
+                width: 100vw;
+                height: 10vh;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="root">
+            <div class="head">
+                <p> Css Units Support</p>
+            </div>
+            <div class="content">
+                <div class="one">
+                        <h2>Tables</h2>
+                        <ul>
+                            <li><a href="S:\HTML\table1.html">Employee</a></li>
+                            <li><a href="S:\HTML\table2.html">Seminars</a></li>
+                            <li><a href="S:\HTML\table3.html">Invoice</a></li>
+                            <li><a href="S:\HTML\table4.html">Marksheet</a></li>
+                            <li><a href="S:\HTML\table5.html">Workplace area</a></li>
+                            <li><a href="S:\HTML\table6.html">Timetable</a></li>
+                            <li><a href="S:\HTML\table7.html">Human</a></li>
+                            <li><a href="S:\HTML\position.html">Position</a></li>
+                        </ul>
+                </div>
+                <div class="two">
+                    <table border="1" style="background-color: white;">
+                        <caption>A <i>testvtable with merged cells</i></caption>
+                        <tr>
+                            <th rowspan="2"></th>
+                            <th colspan="2" style="padding: 10px;">Average</th>
+                            <th rowspan="2" style="padding: 15px;">Red<br>eyes</th>
+                        </tr>
+                        <tr>
+                            <th style="padding: 10px;">Height</th>
+                            <th style="padding: 10px; border-right: 1px solid black;">Weight</th>
+                        </tr>
+                        <tr>
+                            <th style="padding: 10px;">Males</th>
+                            <td>1.9</td>
+                            <td>0.003</td>
+                            <td>40%</td>
+                        </tr>
+                        <tr>
+                            <th style="padding: 10px;">Females</th>
+                            <td>1.7</td>
+                            <td>0.002</td>
+                            <td>43%</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="footer">
+                <p>Footer</p>
+            </div>
+        </div>
+    </body>
+</html>
